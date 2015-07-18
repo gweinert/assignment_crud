@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
-  include UserHelper
+ 
+  include UsersHelper
+ 
   def index
     @users = User.all
   end
@@ -18,7 +20,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new (user_params)
     @user.save
-    flash.notice = "User '#{@article.title}' added!"
+    flash.notice = "User '#{@user.name}' added!"
     redirect_to user_path(@user)
   end
 
