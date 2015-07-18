@@ -1,0 +1,7 @@
+<div>
+  <p> Posted <%= distance_of_time_in_words(tweet.created_at, Time.now) %> ago</p>
+  <h4>Title <%= tweet.title %></h4>
+
+  <p ><%= tweet.body %></p>
+
+</div>

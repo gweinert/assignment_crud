@@ -1,0 +1,15 @@
+
+<h3>New tweet</h3>
+<%= form_for [ @user, @tweet ] do |f| %>
+  <p>
+    <%= f.label :title, "Tweet title" %><br/>
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :body %><br/>
+    <%= f.text_area :body %>
+  </p>
+  <p>
+    <%= f.submit 'Tweet' %>
+  </p>
+<% end %>

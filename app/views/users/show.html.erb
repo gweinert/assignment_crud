@@ -1,3 +1,8 @@
 <h1>User</h1>
-<p>Name:<%= @user.name %></p>
-<p>Email: <%= @user.email %></p>
+<p>Name:<%= @user.name %> Email: <%= @user.email %></p>
+
+
+<%= render partial: 'tweets/form' %>
+
+<h3>All tweets (<%= @user.tweets.size %>)</h3>
+<%= render partial: 'users/tweet', collection: @user.tweets %>

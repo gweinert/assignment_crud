@@ -1,8 +1,8 @@
 class TweetsController < ApplicationController
 
-  include TweetHelper
+  include TweetsHelper
   def create
-    @tweet = Tweet.new(comment_params)
+    @tweet = Tweet.new(tweet_params)
     @tweet.user_id = params[:user_id]
 
     @tweet.save
