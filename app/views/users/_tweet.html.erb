@@ -3,5 +3,7 @@
   <h4>Title <%= tweet.title %></h4>
 
   <p ><%= tweet.body %></p>
+  <%= link_to "edit", edit_user_tweet_path(@user, tweet) %>
+  <%= link_to "delete", user_tweet_path(@user, tweet), method: :delete, data: {confirm: "Really delete the tweet?"}  %>
 
 </div>
